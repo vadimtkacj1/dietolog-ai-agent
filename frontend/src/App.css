@@ -1,0 +1,276 @@
+/* App.css */
+.App {
+  text-align: left;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Make tables scrollable horizontally */
+  .ant-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+  }
+  
+  /* Responsive grid for statistics */
+  .ant-row .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  /* Smaller padding for mobile */
+  .ant-card-body {
+    padding: 16px;
+  }
+  
+  /* Responsive modals */
+  .ant-modal {
+    margin: 16px;
+    max-width: calc(100vw - 32px);
+  }
+  
+  /* Better button sizes for touch */
+  .ant-btn {
+    min-height: 44px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  
+  /* Responsive forms */
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  /* Responsive tabs */
+  .ant-tabs {
+    overflow-x: auto;
+  }
+  
+  .ant-tabs-tab {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  /* Dashboard specific styles */
+  .dashboard-header {
+    padding: 8px 12px;
+    min-height: 56px;
+  }
+  
+  .dashboard-content {
+    padding: 12px 8px;
+  }
+  
+  /* Table improvements for mobile */
+  .ant-table {
+    font-size: 12px;
+  }
+  
+  .ant-table-thead > tr > th {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  
+  .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  
+  /* Card improvements */
+  .ant-card-head-title {
+    font-size: 16px;
+  }
+  
+  /* Form improvements */
+  .ant-input,
+  .ant-select-selector {
+    font-size: 16px;
+    height: 44px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Even smaller screens */
+  .ant-card-body {
+    padding: 12px;
+  }
+  
+  .dashboard-content {
+    padding: 8px 4px;
+  }
+  
+  .dashboard-header {
+    padding: 6px 8px;
+    min-height: 50px;
+  }
+  
+  .ant-modal {
+    margin: 8px;
+    max-width: calc(100vw - 16px);
+  }
+  
+  /* Stack form elements vertically */
+  .ant-form-item-control-input {
+    width: 100%;
+  }
+  
+  /* Smaller buttons for very small screens */
+  .ant-btn {
+    min-height: 40px;
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+  
+  /* Smaller table text */
+  .ant-table {
+    font-size: 11px;
+  }
+  
+  .ant-table-thead > tr > th {
+    padding: 6px 2px;
+    font-size: 10px;
+  }
+  
+  .ant-table-tbody > tr > td {
+    padding: 6px 2px;
+    font-size: 10px;
+  }
+  
+  /* Smaller tabs */
+  .ant-tabs-tab {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  
+  /* Smaller card titles */
+  .ant-card-head-title {
+    font-size: 14px;
+  }
+}
+
+/* Dashboard Layout Styles */
+.dashboard-container {
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.dashboard-content {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: calc(100vh - 64px);
+}
+
+/* Reminder Settings Styles */
+.reminder-settings-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reminder-card {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reminder-card .ant-card-head {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.reminder-card .ant-card-head-title {
+  color: white;
+  font-weight: 600;
+}
+
+.time-picker-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.reminder-type-label {
+  font-weight: 600;
+  color: #1890ff;
+  min-width: 120px;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.save-button:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reminder-settings-container {
+    padding: 16px;
+  }
+  
+  .time-picker-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .reminder-type-label {
+    min-width: auto;
+    text-align: center;
+  }
+}
+
+/* Loading States */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/* Alert Styles */
+.alert-container {
+  margin-bottom: 24px;
+}
+
+.alert-container .ant-alert {
+  border-radius: 8px;
+}
+
+/* Form Styles */
+.ant-form-item-label > label {
+  font-weight: 600;
+  color: #1890ff;
+}
+
+.ant-input-number,
+.ant-time-picker {
+  border-radius: 6px;
+}
+
+.ant-switch-checked {
+  background-color: #52c41a;
+}
